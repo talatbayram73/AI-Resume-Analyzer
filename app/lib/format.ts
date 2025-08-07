@@ -1,4 +1,10 @@
 import { v4 as uuidv4 } from 'uuid';
+import {twMerge} from "tailwind-merge";
+import {type ClassValue, clsx} from "clsx";
+
+export function cn(...inputs: ClassValue[]){
+    return twMerge(clsx(inputs))
+}
 
 /**
  * Formats a file size in bytes to a human-readable string (KB, MB, GB)
@@ -17,3 +23,4 @@ export function formatSize(bytes: number): string {
 }
 
 export const generateUUID = (): string => uuidv4();
+
