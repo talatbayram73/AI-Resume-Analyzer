@@ -1,4 +1,4 @@
-import * as crypto from "node:crypto";
+import { v4 as uuidv4 } from 'uuid';
 
 /**
  * Formats a file size in bytes to a human-readable string (KB, MB, GB)
@@ -16,4 +16,4 @@ export function formatSize(bytes: number): string {
   return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + units[i];
 }
 
-export const generateUUID = () => crypto.randomUUID;
+export const generateUUID = (): string => uuidv4();

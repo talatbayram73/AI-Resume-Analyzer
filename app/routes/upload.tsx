@@ -18,6 +18,7 @@ const Upload = () => {
         setFile(file)
     }
 
+
     const handleAnalyze = async ({ companyName, jobTitle, jobDescription, file }: { companyName: string, jobTitle: string, jobDescription: string, file: File  }) => {
         setIsProcessing(true);
 
@@ -62,6 +63,7 @@ const Upload = () => {
         console.log(data);
         navigate(`/resume/${uuid}`);
     }
+
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
